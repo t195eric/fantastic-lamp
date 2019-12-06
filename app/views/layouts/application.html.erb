@@ -9,7 +9,59 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+
+<div id= "flex-content-container">        
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <a class="navbar-brand" href="#">Flixter</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+      <li class="nav-item">
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
+      </li>
+      <% end %>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+
+<%= yield %>
+</div>
+
+<div id="footer">
+  <div class = "container"
+  <b>Here Footer Footer</b>
+  <br/>
+  <%= link_to 'Link', '#' %>
+  </div>
+</div>
+
+
+</body>
 </html>

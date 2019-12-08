@@ -17,7 +17,7 @@
         <ul>
           <% section.lessons.each do |lesson| %>
             <li>
-              <b><%= lesson.title %></b>
+              <b><%= link_to lesson.title, lesson_path(lesson) %></b>
               -
               <%= lesson.subtitle %>
             </li>

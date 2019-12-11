@@ -2,9 +2,9 @@
 
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
-  font-weight: 200;
+  font-weight: 100;
   box-shadow: 0px  1px 3px #2a2a2a;
-  background: image_url('let-there-be-sun.png');
+  
 }
 
 .navbar-nav{
@@ -13,7 +13,7 @@
 
 .navbar-inverse a.navbar-brand {
   font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
+  font-weight: 50;
   color: white;
   margin: 0;
 }
@@ -47,6 +47,7 @@
 
 .btn {
   border-radius: 0;
+  font-size: 12px;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar{
@@ -62,6 +63,9 @@ h1, h2, h3, h4, h5, h6, .navbar{
 body{
   background: image_url('darkness.png');
   font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .b-box {
@@ -77,12 +81,6 @@ body{
 
 html {
   height: 100%;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
 #flex-content-container {
@@ -115,4 +113,28 @@ body {
 
 .clr {
   clear: both;
+}
+
+.lesson {
+  background-color: black;
+  margin-top: 10px;
+  height: 130px;
+}
+
+.lesson a{
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.lesson a b {
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
 }

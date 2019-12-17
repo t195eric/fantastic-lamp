@@ -1,3 +1,21 @@
+<!--<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.4/themes/base/jquery-ui.css">-->
+<script>
+  $(function() {
+    
+    $('.lessonsb').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { lesson: { row_order_position: ui.item.index() } }
+        });
+      }
+    }); 
+  });
+</script>
+
 <br />
 <div class="b-box col-10 offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
@@ -14,9 +32,9 @@
       <li>
         <%= section.title %>
         <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
-        <ul>
+        <ul class="lessonsb">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li>
+            <li data-update-url="<%= instructor_lesson_path(lesson) %>">
               <b><%= link_to lesson.title, lesson_path(lesson) %></b>
               -
               <%= lesson.subtitle %>

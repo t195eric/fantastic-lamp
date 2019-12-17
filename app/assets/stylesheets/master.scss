@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 .navbar {
   font-family: "Helvetica Neue", Helvetica;
@@ -52,6 +53,10 @@
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .btn {
@@ -149,4 +154,38 @@ html {
   border: 1px solid;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   padding: 20px;
+}
+
+.section-li {
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+  margin: 20px;
+}
+
+.lessons li {
+  background: black;
+  color: white;
+  margin: 3px;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  padding: 8px;
+  font-size: 15px;
+}
+
+.lessons li b{
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.lessons li p{
+  margin: 0;
+}
+
+.ul .header{
+  font-size: 24px;
+}
+
+.ul .header .fa {
+  font-size: 10px;
 }

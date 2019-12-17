@@ -71,6 +71,7 @@ gem 'figaro'
 gem "fog-aws"
 gem "mini_magick"
 gem 'carrierwave-aws'
+gem 'font-awesome-rails'
 gem 'stripe'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
